@@ -1,0 +1,16 @@
+client/.DS_Store
+client/node_modules/
+client/.vscode
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+test/unit/coverage
+test/e2e/reports
+selenium-debug.log
+client/npm-debug.log
+lastupdate.tmp
+client/npm-debug.log
+client/README.md
+clientold
+client/jsconfig.json_
+lastupdate.tmp
