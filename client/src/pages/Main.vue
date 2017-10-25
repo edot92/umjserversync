@@ -2,7 +2,7 @@
   <v-app :dark="dark" standalone>
     <v-navigation-drawer persistent v-model="drawer" enable-resize-watcher app :dark="dark">
       <div v-show="!mini" class="pa-3 text-xs-center">
-        <div class="display-2 py-4">KHATIB</div>
+        <div class="display-2 py-4">HOTIB</div>
         <p>UMJ REALTIME </p>
         <!-- <div style="padding-left:5em">
           <v-switch :label="(!dark ? 'Light' : 'Dark') + ' Theme'" v-model="dark" :dark="dark" hide-details></v-switch>
