@@ -82,10 +82,10 @@ export default {
             }
           },
           legend: {
-            enabled: false
+            enabled: true
           },
           exporting: {
-            enabled: false
+            enabled: true
           },
           series: [
             {
