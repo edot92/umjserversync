@@ -132,10 +132,10 @@ export default {
     }
   },
   beforeCreate () {
-    const token = this.$store.state.token;
-    if (token === null || token === undefined) {
-      this.$router.push('/login');
-    }
+    // const token = this.$store.state.token;
+    // if (token === null || token === undefined) {
+    //   this.$router.push('/login');
+    // }
   },
   methods: {
     httpLoginTemp () {

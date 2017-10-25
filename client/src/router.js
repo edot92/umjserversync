@@ -28,11 +28,11 @@ const router = new Router({
   routes: [
     route('/login', 'Login', 'login'),
     route('/error', 'Error', 'error'),
-    // {
-    //   exact: false,
-    //   path: '/',
-    //   redirect: '/laporanindex'
-    // },
+    {
+      exact: false,
+      path: '/',
+      redirect: '/realtimeindex'
+    },
     route('/forbiden', 'Forbiden', '404 Forbiden'),
     route('/', 'Main', null, [
       // route2('/laporanindex', '/laporan', '/LaporanIndex', 'Laporan'),
