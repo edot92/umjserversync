@@ -18,7 +18,7 @@ var menu = [
   {
     href: '/realtimeindex',
     title: 'Realtime',
-    icon: 'chart'
+    icon: 'insert_chart'
   }
 ];
 
