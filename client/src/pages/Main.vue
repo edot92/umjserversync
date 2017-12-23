@@ -102,50 +102,50 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
-import loading from 'vue-full-loading';
+import { mapState } from "vuex";
+import loading from "vue-full-loading";
 // var server = 'http://103.23.20.159';
 export default {
   components: {
     loading
   },
-  data () {
+  data() {
     return {
       show: false,
-      label: 'Loading...',
-      theme: 'primary',
+      label: "Loading...",
+      theme: "primary",
       dark: false,
       mini: false,
       drawer: true,
-      locales: ['en-US', 'zh-CN'],
-      colors: ['blue', 'green', 'purple', 'red'],
-      mode: ''
+      locales: ["en-US", "zh-CN"],
+      colors: ["blue", "green", "purple", "red"],
+      mode: ""
     };
   },
   computed: {
-    ...mapState(['message', 'menu', 'pageTitle', 'loading'])
+    ...mapState(["message", "menu", "pageTitle", "loading"])
   },
   watch: {
-    theme (param) {},
-    loading (param) {
+    theme(param) {},
+    loading(param) {
       this.show = param;
     }
   },
-  beforeCreate () {
+  beforeCreate() {
     // const token = this.$store.state.token;
     // if (token === null || token === undefined) {
     //   this.$router.push('/login');
     // }
   },
   methods: {
-    httpLoginTemp () {
+    httpLoginTemp() {
       const thisVue = this;
       this.$http({
-        url: '/user/login',
-        method: 'post',
+        url: "/user/login",
+        method: "post",
         data: {
-          username: 'admin',
-          password: 'admin'
+          username: "admin",
+          password: "admin"
         },
         withCredentials: true
       })
@@ -154,37 +154,37 @@ export default {
             // window.swal('info', res.data.message, 'info');
             const datak = res.data.payload;
             const save = { user: datak, token: datak.jwt };
-            thisVue.$http.defaults.headers.common['Jwt'] = datak.jwt;
-            thisVue.$store.commit('setAuth', save);
-            thisVue.$store.commit('setReadyLoad', true);
+            thisVue.$http.defaults.headers.common["Jwt"] = datak.jwt;
+            thisVue.$store.commit("setAuth", save);
+            thisVue.$store.commit("setReadyLoad", true);
           } else {
-            window.swal('error', res.data.message, 'error');
+            window.swal("error", res.data.message, "error");
             console.error(res.data.line);
           }
         })
         .catch(err => {
           console.error(err.toString());
-          window.swal('error', err.toString(), 'error');
+          window.swal("error", err.toString(), "error");
         });
     },
-    firstLoad () {},
-    hideShow () {
+    firstLoad() {},
+    hideShow() {
       this.drawer = !this.drawer;
     },
-    changeLocale (to) {
-      global.helper.ls.set('locale', to);
+    changeLocale(to) {
+      global.helper.ls.set("locale", to);
       this.$i18n.locale = to;
     },
-    fetchMenu () {
+    fetchMenu() {
       // fetch menu from server
       // this.$http.get('menu').then(({data}) => this.$store.commit('setMenu', data))
     }
   },
 
-  created () {
+  created() {
     this.fetchMenu();
   },
-  mounted () {
+  mounted() {
     // const thisVue = this;
     // thisVue.firstLoad();
   }

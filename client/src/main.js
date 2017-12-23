@@ -3,7 +3,6 @@ import helper from './helper';
 global.helper = helper;
 import config from './config';
 import store from './store/';
-global.store = store;
 import router from './router';
 import i18n from './i18n/';
 import Vuetify from 'vuetify';
@@ -34,6 +33,7 @@ import Dropzone from 'vue2-dropzone';
 import VueQuillEditor from 'vue-quill-editor';
 Vue.use(VueQuillEditor);
 Vue.component('dropzone', Dropzone);
+global.store = store;
 
 // import validator from 'indicative'
 import validator from 'Validator';
